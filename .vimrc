@@ -63,6 +63,9 @@ map <Leader>b <Esc>:FufBuffer<Return>
 
 delcommand AllMap
 
+" Create a shortcut for NERDTree (FN+F8)
+map <F8> :NERDTreeToggle
+
 " Sudo to write
 cmap w!! w !sudo tee % > /dev/null
 
