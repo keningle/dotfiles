@@ -1,6 +1,9 @@
 " Always use bash
 set shell=/bin/bash
 
+" Turn on Pathogen
+call pathogen#infect()
+
 " Helpful defaults
 set nocompatible " Disable complete vi compatibility
 set backspace=indent,eol,start " Smarter backspacing
@@ -20,6 +23,7 @@ set showmatch " Show matching brackets
 set ruler " Show cursor information
 set smartcase " Case-sensitive searching for searches with uppercase letters
 set textwidth=0 " No hard line wrapping
+set number " Turn on line numbers
 set viminfo=\"50,'20 " Store session info in ~/.viminfo
 set wildmode=list:longest " More useful command completion
 " Hide annoying files from wildmenu/netrw/fuzzyfinder
@@ -45,17 +49,6 @@ endif
 
 " Convenience command to map something to every mode
 command -nargs=+ AllMap noremap <args>|noremap! <args>|vnoremap <args>
-
-" emacs-style bindings
-inoremap <Esc><BS> <C-W>
-cnoremap <Esc><BS> <C-W>
-AllMap <C-A> <Home>
-AllMap <C-E> <End>
-AllMap <C-P> <Up>
-AllMap <C-N> <Down>
-AllMap <C-G> <Esc><Esc>
-AllMap <Esc><Right> <C-Right>
-AllMap <Esc><Left> <C-Left>
 
 " Map FreeBSD/OS X keys properly
 AllMap <Esc>[H <xHome>
